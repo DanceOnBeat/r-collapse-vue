@@ -1,0 +1,18 @@
+language: node_js
+node_js: "10.11.0"
+install:
+  - yarn
+  - yarn add codecov --dev
+script: 
+  - yarn test:unit
+  - yarn build
+after_success:
+  - codecov
+
+deploy:
+  provider: npm
+  email: zhurui0904@gmail.com
+  api_key: $AUTH_TOKEN
+  on:
+    tags: true
+    branch: master
