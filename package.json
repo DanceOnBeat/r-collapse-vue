@@ -1,8 +1,11 @@
 {
   "name": "r-collapse-vue",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "a collapse component for VueJs",
-  "keywords": ["Vue", "collapse"],
+  "keywords": [
+    "Vue",
+    "collapse"
+  ],
   "author": {
     "name": "Ray",
     "email": "zhurui0904@gmail.com"
