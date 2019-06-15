@@ -11,6 +11,7 @@
     "type": "git",
     "url": "git@github.com:DanceOnBeat/r-collapse-vue.git"
   },
+  "main": "dist/r-collapse-vue.common.js",
   "scripts": {
     "serve": "vue-cli-service serve src/demo/index.ts",
     "build": "vue-cli-service build --target lib --entry src/main.ts",
@@ -36,5 +37,8 @@
     "ts-jest": "^23.0.0",
     "typescript": "^3.4.3",
     "vue-template-compiler": "^2.6.10"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
   }
 }

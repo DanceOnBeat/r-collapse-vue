@@ -121,8 +121,7 @@ export default class RCollapsePanel extends Mixins(EventMixin) {
   }
 
   public getContentHeihgt(el: HTMLElement): string {
-    const children = el.children;
-    if (children) {
+    if (el.scrollHeight) {
       return el.scrollHeight + 'px';
     }
     return '';
