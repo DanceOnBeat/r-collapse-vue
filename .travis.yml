@@ -14,5 +14,6 @@ deploy:
   email: zhurui0904@gmail.com
   api_key: $AUTH_TOKEN
   on:
+    tags: true
     branch: master
   skip_cleanup: true
