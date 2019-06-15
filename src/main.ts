@@ -1,8 +1,7 @@
-import Vue from 'vue';
-import App from './App.vue';
+import RCollapse from '@/components/Collapse.vue';
+import RCollapsePanel from '@/components/CollapsePanel.vue';
 
-Vue.config.productionTip = false;
-
-new Vue({
-  render: (h) => h(App),
-}).$mount('#app');
+export {
+  RCollapse,
+  RCollapsePanel,
+};
