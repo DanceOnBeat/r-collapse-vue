@@ -1,5 +1,7 @@
 language: node_js
 node_js: "10.11.0"
+if: tag IS present
+cache: yarn
 install:
   - yarn
   - yarn add codecov --dev
