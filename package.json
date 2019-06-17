@@ -1,29 +1,25 @@
 {
   "name": "r-collapse-vue",
-  "version": "1.0.0",
+  "version": "0.1.8",
   "description": "a collapse component for VueJs",
-  "keywords": [
-    "Vue",
-    "collapse"
-  ],
   "author": {
     "name": "Ray",
     "email": "zhurui0904@gmail.com"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:DanceOnBeat/r-collapse-vue.git"
-  },
-  "files": [
-    "dist"
-  ],
-  "main": "dist/r-collapse-vue.common.js",
   "scripts": {
     "serve": "vue-cli-service serve src/demo/index.ts",
     "build": "vue-cli-service build --target lib --entry src/main.ts",
     "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit"
+    "styleguide": "vue-cli-service styleguidist",
+    "styleguide:build": "vue-cli-service styleguidist:build",
+    "test:unit": "vue-cli-service test:unit",
+    "serve:doc": "vue-styleguidist server",
+    "build:doc": "vue-styleguidist build"
   },
+  "main": "dist/r-collapse-vue.common.js",
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "core-js": "^2.6.5",
     "vue": "^2.6.10",
@@ -42,9 +38,19 @@
     "sass-loader": "^7.1.0",
     "ts-jest": "^23.0.0",
     "typescript": "^3.4.3",
+    "vue-cli-plugin-styleguidist": "^3.14.5",
+    "vue-router": "^3.0.6",
     "vue-template-compiler": "^2.6.10"
   },
+  "keywords": [
+    "Vue",
+    "collapse"
+  ],
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:DanceOnBeat/r-collapse-vue.git"
   }
 }

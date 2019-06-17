@@ -4,6 +4,7 @@
     :class="status ? activeClass : ''"
   >
     <div class="r-collapse-panel-fixed" @click="handleFixedClick">
+      <!-- @slot 固定头部，是一个作用域插槽，可提供toggle、open、close方法 -->
       <slot
         name="fixed"
         :toggle="toggle"
@@ -21,6 +22,7 @@
       @after-leave="afterLeave"
     >
       <div v-show="status" class="r-collapse-panel-content">
+        <!-- @slot 自定义可伸缩内容的区域 -->
         <slot></slot>
       </div>
     </transition>
@@ -34,12 +36,16 @@ import EventMixin from '@/mixins/event';
 
 @Component
 export default class RCollapsePanel extends Mixins(EventMixin) {
+  /**
+   * 唯一标识，不指定会随机生成
+   */
   @Prop({
     type: String,
   })
   public name!: string;
-
-  // 默认点击fixed能够切换panel状态
+  /**
+   * 默认点击fixed能够伸缩内容区域
+   */
   @Prop({
     type: Boolean,
     default: true,
@@ -50,8 +56,7 @@ export default class RCollapsePanel extends Mixins(EventMixin) {
     return this.name || Math.random().toString(32).substr(2);
   }
 
-  // 当前展开的panel集合
-  get activeKeys(): string[] {
+  get activeKeys(): string[] { // 当前展开的panel集合
     if (this.parent) {
       return this.parent.value;
     }
@@ -77,6 +82,10 @@ export default class RCollapsePanel extends Mixins(EventMixin) {
     }
   }
 
+  /**
+   * 切换伸缩状态
+   * @public
+   */
   public toggle() {
     if (this.status) {
       this.close();
@@ -85,10 +94,18 @@ export default class RCollapsePanel extends Mixins(EventMixin) {
     }
   }
 
+  /**
+   * 将内容展开
+   * @public
+   */
   public open() {
     this.dispatch('RCollapse', 'r.collapse.open', [this.innerName]);
   }
 
+  /**
+   * 将内容收起
+   * @public
+   */
   public close() {
     this.dispatch('RCollapse', 'r.collapse.close', [this.innerName]);
   }

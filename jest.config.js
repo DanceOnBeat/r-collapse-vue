@@ -35,5 +35,5 @@ module.exports = {
     }
   },
   "collectCoverage": true,
-  "collectCoverageFrom": ["**/*.{vue}"]
+  "collectCoverageFrom": ["src/components/**/*.vue"]
 }
