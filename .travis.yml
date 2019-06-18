@@ -22,7 +22,7 @@ deploy:
     skip_cleanup: true
   - provider: pages
     skip_cleanup: true
-    github_token: "VMJ4AbvI+5i09o5C9yeMn286WYcEZ+QC4sQnk3u0v+4QWzIZJWBaWJFHjSZhmCjIqsJMu+MAhp79E7eHokEbcnOlZ7tr0FVJLloL8/QELBHlJvAvE1/AM1zYHTuE4Z5rLs8eDzk+paG+z8r+ILFn2VnSwwllZT6UWSpqP1u4W3zckyeka/PUyjPbu3ADb8LWUAtIgifVOlXP+lTzupiyw16XEpawD08FgucOj4WRAuj2JsCV8UxibP7ku8IPdnX0rOzioWTuAMSvM2aUnuEjZeUOwTme4PQBwVl/GL4LXo6KFHg9V1aqdremjxfrFRduqoQDyr2TRYT+7FT5krIA0uLVSu5aFDGUWX5B9AKpJC8k7SBFW8EFb1ocoLxSKgCIbKOyOjkvn9a6k9wnIk/J8DZhJysByjN5P3AGSKxQRk4HTVQPoGoWX7Po4ZvsYw1Kk109OsCFfoUaWVT21gbBP9lJpUTRThS5K9/o4LK12z0Q8udJDd/G3+z6tqt5MO35IZqDU2JQhDxTM67MJP5Pops78ySYC4xNDNPH1YXuYGI9ZIcjo70OePvxRxe4SfziUT4P7q0R1hO24xcT7+Dlg3RPkMwDio6hgSYfhYLbDRccURyH2ufqNjLNlcsXtG6MSlnmDJkiM2A8UMuh71sgu/kp02kcV5ENsOs4oMvK7Bo="  # Set in the settings page of your repository, as a secure variable
+    github_token: $GITHUB_TOKEN
     keep_history: true
     on:
       branch: master
