@@ -25,7 +25,6 @@ deploy:
     github_token: $GITHUB_TOKEN
     keep_history: true
     target_branch: master
-    local_dir: docs
     on:
       branch: master
       if: tag IS blank
