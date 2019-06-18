@@ -20,10 +20,10 @@ deploy:
       branch: master
       if: tag IS present
     skip_cleanup: true
-  # - provider: pages
-  #   skip_cleanup: true
-  #   github_token: $GITHUB_TOKEN
-  #   keep_history: true
-  #   on:
-  #     branch: master
-  #     if: tag IS blank
+  - provider: pages
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    keep_history: true
+    on:
+      branch: master
+      if: tag IS blank
