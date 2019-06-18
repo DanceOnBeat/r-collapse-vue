@@ -1,0 +1,29 @@
+language: node_js
+node_js: "10.11.0"
+cache: yarn
+install:
+  - yarn
+  - yarn add codecov --dev
+script: 
+  - yarn test:unit
+  - yarn build
+  - yarn build:doc
+after_success:
+  - codecov
+
+deploy:
+  - provider: npm
+    email: zhurui0904@gmail.com
+    api_key: $AUTH_TOKEN
+    on:
+      tags: true
+      branch: master
+      if: tag IS present
+    skip_cleanup: true
+  - provider: pages
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    target_branch: master
+    on:
+      branch: master
+      if: tag IS blank
