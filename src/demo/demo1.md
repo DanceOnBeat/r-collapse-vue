@@ -1,6 +1,6 @@
 ***
 
-* 必须使用Collapse包含CollapsePanel hhh
+* 必须使用Collapse包含CollapsePanel
 * 需给Collapse传入v-model用来控制展开的数据
 * CollapsePanel中通过slot="fixed"定义固定头，默认slot为可伸缩的内容区域
 * 可通过activeClass指定展开状态的类名，方便对样式进行区别
