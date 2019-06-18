@@ -26,4 +26,3 @@ deploy:
     target_branch: master
     on:
       branch: master
-      if: tag IS blank
