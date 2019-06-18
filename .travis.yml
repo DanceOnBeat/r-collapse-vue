@@ -6,7 +6,7 @@ install:
 script: 
   - yarn test:unit
   - yarn build
-  - yarn build:doc
+  # - yarn build:doc
 after_success:
   - codecov
 
@@ -19,10 +19,10 @@ deploy:
       branch: master
       if: tag IS present
     skip_cleanup: true
-  - provider: pages
-    skip_cleanup: true
-    github_token: $GITHUB_TOKEN
-    keep_history: true
-    target_branch: master
-    on:
-      branch: master
+  # - provider: pages
+  #   skip_cleanup: true
+  #   github_token: $GITHUB_TOKEN
+  #   keep_history: true
+  #   target_branch: master
+  #   on:
+  #     branch: master
