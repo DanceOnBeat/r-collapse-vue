@@ -13,8 +13,8 @@
     "styleguide": "vue-cli-service styleguidist",
     "styleguide:build": "vue-cli-service styleguidist:build",
     "test:unit": "vue-cli-service test:unit",
-    "serve:doc": "vue-styleguidist server",
-    "build:doc": "vue-styleguidist build"
+    "serve:doc": "vue-cli-service styleguidist",
+    "build:doc": "vue-cli-service styleguidist:build"
   },
   "main": "dist/r-collapse-vue.common.js",
   "files": [
