@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to r-collapse-vue 👋</h1>
 <p>
-  <img src="https://img.shields.io/badge/version-0.1.8-blue.svg?cacheSeconds=2592000" />
+  <img src="https://img.shields.io/npm/v/r-collapse-vue/latest.svg?style=popout" />
   <a href="https://danceonbeat.github.io/r-collapse-vue/">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" target="_blank" />
   </a>
